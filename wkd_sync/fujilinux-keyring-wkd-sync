@@ -6,9 +6,9 @@
 # relevant for Arch Linux packaging using the distribution's Web Key Directory
 # (WKD).
 # This ensures, that new signatures on already existing keys are fetched before
-# a new version of archlinux-keyring is installed. Fetching signatures early
+# a new version of fujilinux-keyring is installed. Fetching signatures early
 # prevents marginal trust issues with packages that are signed by keys which
-# only gain full trust when updating to a new version of archlinux-keyring in
+# only gain full trust when updating to a new version of fujilinux-keyring in
 # that same system upgrade action.
 
 set -eu

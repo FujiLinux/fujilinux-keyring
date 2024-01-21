@@ -1,5 +1,5 @@
 [Unit]
-Description=Refresh existing PGP keys of archlinux-keyring regularly
+Description=Refresh existing PGP keys of fujilinux-keyring regularly
 
 [Timer]
 OnCalendar=weekly

@@ -1,7 +1,9 @@
-# archlinux-keyring
+# fujilinux-keyring
 
-The archlinux-keyring project holds PGP packet material and tooling
-(`keyringctl`) to create the distribution keyring for Arch Linux.
+Forked from [archlinux-keyring](https://gitlab.archlinux.org/archlinux/archlinux-keyring) to verify Fuji Linux packaging.
+
+The fujilinux-keyring project holds PGP packet material and tooling
+(`keyringctl`) to create the distribution keyring for Fuji Linux.
 The keyring is used by pacman to establish the web of trust for the packagers
 of the distribution.
 
@@ -107,7 +109,7 @@ Verify certificates against modern expectations and assumptions
 
 ## Installation
 
-To install archlinux-keyring system-wide use the included `Makefile`:
+To install fujilinux-keyring system-wide use the included `Makefile`:
 
 ```bash
 make install
@@ -121,32 +123,14 @@ how to provide fixes or improvements for the code base.
 ## Releases
 
 [Releases of
-archlinux-keyring](https://gitlab.archlinux.org/archlinux/archlinux-keyring/-/tags)
-are exclusively created by [keyring maintainers](https://gitlab.archlinux.org/archlinux/archlinux-keyring/-/project_members?with_inherited_permissions=exclude).
+fujilinux-keyring](https://github.com/FujiLinux/fujilinux-keyring/tags)
+are exclusively created by maintainers.
 
 The tags are signed with one of the following legitimate keys:
 
 ```
-Christian Hesse <eworm@archlinux.org>
-02FD 1C7A 934E 6145 4584  9F19 A623 4074 498E 9CEE
-
-David Runge <dvzrv@archlinux.org>
-991F 6E3F 0765 CF62 9588  8586 139B 09DA 5BF0 D338
-
-Florian Pritz <bluewind@archlinux.org>
-CFA6 AF15 E5C7 4149 FC1D  8C08 6D16 55C1 4CE1 C13E
-
-Johannes Löthberg <demize@archlinux.org>
-5134 EF9E AF65 F95B 6BB1  608E 50FB 9B27 3A9D 0BB5
-
-Leonidas Spyropoulos <artafinde@archlinux.org>
-B4B7 5962 5D46 3343 0B74  8770 59E4 3E10 6B24 7368
-
-Levente Polyak <anthraxx@archlinux.org>
-E240 B57E 2C46 30BA 768E  2F26 FC1B 547C 8D81 72C8
-
-Morten Linderud <foxboron@archlinux.org>
-C100 3466 7663 4E80 C940  FB9E 9C02 FF41 9FEC BE16
+Evan Welsh <ewlsh@fujilinux.org>
+<key>
 ```
 
 To verify a tag, first import the relevant PGP keys:
@@ -165,5 +149,5 @@ git verify-tag <tag>
 
 ## License
 
-Archlinux-keyring is licensed under the terms of the **GPL-3.0-or-later** (see
+fujilinux-keyring is licensed under the terms of the **GPL-3.0-or-later** (see
 [LICENSE](LICENSE)).

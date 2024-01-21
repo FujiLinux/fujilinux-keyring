@@ -1,6 +1,6 @@
 # Contributing
 
-These are the contribution guidelines for archlinux-keyring.
+These are the contribution guidelines for fujilinux-keyring.
 All code contributions fall under the terms of the GPL-3.0-or-later (see
 [LICENSE](LICENSE)).
 
@@ -8,15 +8,17 @@ Please read our distribution-wide [Code of
 Conduct](https://terms.archlinux.org/docs/code-of-conduct/) before
 contributing, to understand what actions will and will not be tolerated.
 
-Development of archlinux-keyring takes place on Arch Linux' Gitlab:
-https://gitlab.archlinux.org/archlinux/archlinux-keyring.
+fujilinux-keyring is forked from archlinux-keyring, any bug fixes
+or contributions unrelated to enabling this package for use with
+Fuji Linux should be submitted upstream on Arch Linux' Gitlab:
+https://gitlab.archlinux.org/archlinux/fujilinux-keyring.
 
-Any merge request to the repository requires two approvals of authorized
-approvers (the current main key holders).
+Otherwise Fuji Linux specific changes (e.g. adding new keys) happens on
+the [Fuji Linux GitHub organization](https://github.com/FujiLinux/fujilinux-keyring).
 
 ## Discussion
 
-Discussion around archlinux-keyring may take place on the [arch-projects
+Discussion around fujilinux-keyring may take place on the [arch-projects
 mailing list](https://lists.archlinux.org/listinfo/arch-projects) and in
 [#archlinux-projects](ircs://irc.libera.chat/archlinux-projects) on [Libera
 Chat](https://libera.chat/).

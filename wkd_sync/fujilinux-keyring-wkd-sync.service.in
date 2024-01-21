@@ -2,14 +2,14 @@
 After=network-online.target nss-lookup.target
 ConditionPathIsDirectory=/etc/pacman.d/gnupg/
 ConditionPathIsReadWrite=/etc/pacman.d/gnupg/
-ConditionFileIsExecutable=SCRIPT_TARGET_DIR/archlinux-keyring-wkd-sync
-Description=Refresh existing keys of archlinux-keyring
+ConditionFileIsExecutable=SCRIPT_TARGET_DIR/fujilinux-keyring-wkd-sync
+Description=Refresh existing keys of fujilinux-keyring
 Wants=network-online.target
 StartLimitIntervalSec=1hour
 StartLimitBurst=3
 
 [Service]
-ExecStart=SCRIPT_TARGET_DIR/archlinux-keyring-wkd-sync
+ExecStart=SCRIPT_TARGET_DIR/fujilinux-keyring-wkd-sync
 Restart=on-failure
 RestartSec=5minutes
 

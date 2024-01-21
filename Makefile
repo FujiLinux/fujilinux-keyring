@@ -10,11 +10,11 @@ WKD_BUILD_DIR ?= $(BUILD_DIR)/wkd
 KEYRING_FILE=archlinux.gpg
 KEYRING_REVOKED_FILE=archlinux-revoked
 KEYRING_TRUSTED_FILE=archlinux-trusted
-PROJECT=archlinux-keyring
-WKD_SYNC_SCRIPT=archlinux-keyring-wkd-sync
-WKD_SYNC_SERVICE_IN=archlinux-keyring-wkd-sync.service.in
-WKD_SYNC_SERVICE=archlinux-keyring-wkd-sync.service
-WKD_SYNC_TIMER=archlinux-keyring-wkd-sync.timer
+PROJECT=fujilinux-keyring
+WKD_SYNC_SCRIPT=fujilinux-keyring-wkd-sync
+WKD_SYNC_SERVICE_IN=fujilinux-keyring-wkd-sync.service.in
+WKD_SYNC_SERVICE=fujilinux-keyring-wkd-sync.service
+WKD_SYNC_TIMER=fujilinux-keyring-wkd-sync.timer
 SYSTEMD_TIMER_DIR=$(SYSTEMD_SYSTEM_UNIT_DIR)/timers.target.wants/
 SOURCES := $(shell find keyring) $(shell find libkeyringctl -name '*.py' -or -type d) keyringctl
 
