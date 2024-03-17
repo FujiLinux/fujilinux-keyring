@@ -55,15 +55,14 @@ clean:
 
 release: clean build
 	$(if $(RELEASE),,$(error RELEASE was not specified!))
-	@glab auth status -h gitlab.archlinux.org
+	@gh auth status
 	@git tag -s $(RELEASE) -m "release version $(RELEASE)"
 	@git push origin refs/tags/$(RELEASE)
 	@mkdir -p $(BUILD_DIR)/$(PROJECT)-$(RELEASE)/
 	@cp $(BUILD_DIR)/{$(KEYRING_FILE),$(KEYRING_REVOKED_FILE),$(KEYRING_TRUSTED_FILE)} $(BUILD_DIR)/$(PROJECT)-$(RELEASE)/
 	@tar cvfz $(BUILD_DIR)/$(PROJECT)-$(RELEASE).tar.gz -C $(BUILD_DIR)/ $(PROJECT)-$(RELEASE)/
 	@gpg -o $(BUILD_DIR)/$(PROJECT)-$(RELEASE).tar.gz.sig --default-key "$(shell git config --local --get user.signingkey)" -s $(BUILD_DIR)/$(PROJECT)-$(RELEASE).tar.gz
-	# NOTE: we specify GITLAB_HOST, because otherwise glab YOLO uses whatever is specified by the `host` key in its config and silently breaks all links...
-	GITLAB_HOST=gitlab.archlinux.org glab release create $(RELEASE) ./build/$(PROJECT)-$(RELEASE).tar.gz* --name=$(RELEASE) --notes="release version $(RELEASE)"
+	gh release create $(RELEASE) ./build/$(PROJECT)-$(RELEASE).tar.gz* --title=$(RELEASE) --notes="release version $(RELEASE)"
 
 install: build wkd_sync_service
 	install -vDm 644 build/{$(KEYRING_FILE),$(KEYRING_REVOKED_FILE),$(KEYRING_TRUSTED_FILE)} -t $(DESTDIR)$(KEYRING_TARGET_DIR)

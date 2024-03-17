@@ -11,7 +11,7 @@ contributing, to understand what actions will and will not be tolerated.
 fujilinux-keyring is forked from archlinux-keyring, any bug fixes
 or contributions unrelated to enabling this package for use with
 Fuji Linux should be submitted upstream on Arch Linux' Gitlab:
-https://gitlab.archlinux.org/archlinux/fujilinux-keyring.
+https://gitlab.archlinux.org/archlinux/archlinux-keyring.
 
 Otherwise Fuji Linux specific changes (e.g. adding new keys) happens on
 the [Fuji Linux GitHub organization](https://github.com/FujiLinux/fujilinux-keyring).
