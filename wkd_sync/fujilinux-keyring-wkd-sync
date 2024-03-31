@@ -13,15 +13,11 @@
 
 set -eu
 
-readonly main_key_domain_match="@master-key.archlinux.org$"
-readonly packager_domain_match="@archlinux.org$"
+readonly main_key_domain_match="@fujilinux.org$"
+readonly packager_domain_match="@fujilinux.org$"
 readonly homedir="$(pacman-conf GPGDir)"
 # fingerprints of keys with SHA-1 self-signatures (no longer used)
-readonly invalid_fingerprints=(
-    0F334D8698881578F65D2AE55ED514A45BD5C938  # djgera@archlinux.org
-    F4DDD6DDCEC320B665F502AAE8F18BA1615137BC  # ibiru@archlinux.org
-    EA84EA00866F51FB10CD19AE426991CD8406FFF3  # ronald@archlinux.org
-)
+declare -r -a invalid_fingerprints=()
 
 domain_match=""
 gpg_locate_external=(
@@ -37,7 +33,7 @@ gpg_locate_external=(
 )
 # a list of <fingerprint> <mbox> tuples of all keys in the keyring
 # e.g.:
-# C7E7849466FE2358343588377258734B41C31549 dvzrv@archlinux.org
+# C7E7849466FE2358343588377258734B41C31549 dvzrv@fujilinux.org
 # 8FC15A064950A99DD1BD14DD39E4B877E62EB915 svenstaro@gmail.com
 fingerprint_mboxes="$(
     gpg --homedir "$homedir" --no-permission-warning --list-keys --list-options show-only-fpr-mbox
